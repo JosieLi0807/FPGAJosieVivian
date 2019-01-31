@@ -1,0 +1,13 @@
+|STM_CLK
+clock_in => count[0].CLK
+clock_in => count[1].CLK
+clock_in => clock_out_div3_33~reg0.CLK
+clock_in => clock_out_div2~reg0.CLK
+clock_in => clock_out.DATAIN
+clock_out <= clock_in.DB_MAX_OUTPUT_PORT_TYPE
+clock_out_div2 <= clock_out_div2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_out_div3_33 <= clock_out_div3_33~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_out_div3_50 <= <GND>
+clock_pll <= <GND>
+
+

@@ -1,0 +1,39 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do STM_CLK_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGAJosieVivian/STM_CLK {C:/FPGAJosieVivian/STM_CLK/STM_CLK.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:37 on Jan 31,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGAJosieVivian/STM_CLK" C:/FPGAJosieVivian/STM_CLK/STM_CLK.v 
+# -- Compiling module STM_CLK
+# 
+# Top level modules:
+# 	STM_CLK
+# End time: 13:05:37 on Jan 31,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.STM_CLK
+# vsim work.STM_CLK 
+# Start time: 13:05:55 on Jan 31,2019
+# Loading work.STM_CLK
+add wave -position insertpoint  \
+sim:/STM_CLK/clock_in \
+sim:/STM_CLK/clock_out \
+sim:/STM_CLK/clock_out_div2 \
+sim:/STM_CLK/clock_out_div3_33 \
+sim:/STM_CLK/clock_out_div3_50 \
+sim:/STM_CLK/clock_pll
+force -freeze sim:/STM_CLK/clock_in 1 0, 0 {50 ps} -r 100
+force -freeze sim:/STM_CLK/clock_in 1 0, 0 {10000 ps} -r {20 ns}
+run 240 ns
+# End time: 13:58:06 on Jan 31,2019, Elapsed time: 0:52:11
+# Errors: 0, Warnings: 0
