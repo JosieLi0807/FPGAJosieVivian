@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="IP_DIV_sim/IP_DIV.vo" type="VERILOG" />
+ <topLevel name="IP_DIV" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
