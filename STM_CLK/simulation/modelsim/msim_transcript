@@ -1,5 +1,9 @@
 # Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # do STM_CLK_run_msim_rtl_verilog.do
+# if ![file isdirectory STM_CLK_iputf_libs] {
+# 	file mkdir STM_CLK_iputf_libs
+# }
+# 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -10,30 +14,108 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:17:25 on Feb 09,2019
+# vlog -reportprogress 300 C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo 
+# -- Compiling module IP_DIV
+# 
+# Top level modules:
+# 	IP_DIV
+# End time: 16:17:25 on Feb 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
 # vlog -vlog01compat -work work +incdir+C:/FPGAJosieVivian/STM_CLK {C:/FPGAJosieVivian/STM_CLK/STM_CLK.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:05:37 on Jan 31,2019
+# Start time: 16:17:25 on Feb 09,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGAJosieVivian/STM_CLK" C:/FPGAJosieVivian/STM_CLK/STM_CLK.v 
 # -- Compiling module STM_CLK
 # 
 # Top level modules:
 # 	STM_CLK
-# End time: 13:05:37 on Jan 31,2019, Elapsed time: 0:00:00
+# End time: 16:17:25 on Feb 09,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.STM_CLK
-# vsim work.STM_CLK 
-# Start time: 13:05:55 on Jan 31,2019
+vsim -L altera_lnsim_ver work.STM_CLK
+# vsim -L altera_lnsim_ver work.STM_CLK 
+# Start time: 16:17:31 on Feb 09,2019
 # Loading work.STM_CLK
+# Loading work.IP_DIV
+# Loading sv_std.std
+# Loading altera_lnsim_ver.altera_lnsim_functions
+# Loading altera_lnsim_ver.altera_pll
+# Loading altera_lnsim_ver.dps_extra_kick
+# Loading altera_lnsim_ver.dprio_init
+# Loading altera_lnsim_ver.altera_generic_pll_functions
+# Loading altera_lnsim_ver.generic_pll
+# ** Warning: (vsim-3017) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /STM_CLK/PLL/ip_div_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/FPGAJosieVivian/STM_CLK/IP_DIV_sim/IP_DIV.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
 add wave -position insertpoint  \
 sim:/STM_CLK/clock_in \
 sim:/STM_CLK/clock_out \
 sim:/STM_CLK/clock_out_div2 \
 sim:/STM_CLK/clock_out_div3_33 \
 sim:/STM_CLK/clock_out_div3_50 \
-sim:/STM_CLK/clock_pll
+sim:/STM_CLK/clock_pll \
+sim:/STM_CLK/count \
+sim:/STM_CLK/fedge_msb
 force -freeze sim:/STM_CLK/clock_in 1 0, 0 {50 ps} -r 100
-force -freeze sim:/STM_CLK/clock_in 1 0, 0 {10000 ps} -r {20 ns}
-run 240 ns
-# End time: 13:58:06 on Jan 31,2019, Elapsed time: 0:52:11
-# Errors: 0, Warnings: 0
+run
+# Info: hierarchical_name = STM_CLK.PLL.ip_div_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Adjusting output period from 60002.400096 to 60000.000000
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (STM_CLK.PLL.ip_div_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = STM_CLK.PLL.ip_div_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 16.666 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 30000.000000
+# Info: output_clock_low_period = 30000.000000
+# Info: hierarchical_name = STM_CLK.PLL.ip_div_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 16:19:10 on Feb 09,2019, Elapsed time: 0:01:39
+# Errors: 0, Warnings: 22

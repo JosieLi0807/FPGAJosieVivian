@@ -1,5 +1,5 @@
 EDA Netlist Writer report for STM_CLK
-Thu Jan 31 13:58:46 2019
+Sat Feb 09 16:55:02 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jan 31 13:58:46 2019 ;
+; EDA Netlist Writer Status ; Successful - Sat Feb 09 16:55:02 2019 ;
 ; Revision Name             ; STM_CLK                               ;
 ; Top-level Entity Name     ; STM_CLK                               ;
 ; Family                    ; Cyclone V                             ;
@@ -81,14 +81,19 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 31 13:58:44 2019
+    Info: Processing started: Sat Feb 09 16:55:00 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off STM_CLK -c STM_CLK
+Warning (125092): Tcl Script File sys_pll.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE sys_pll.qip
+Warning (125092): Tcl Script File sys_pll.sip not found
+    Info (125063): set_global_assignment -name SIP_FILE sys_pll.sip
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
 Info (204019): Generated file STM_CLK.vo in folder "C:/FPGAJosieVivian/STM_CLK/simulation/modelsim/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4743 megabytes
-    Info: Processing ended: Thu Jan 31 13:58:46 2019
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Sat Feb 09 16:55:02 2019
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:03
 
 

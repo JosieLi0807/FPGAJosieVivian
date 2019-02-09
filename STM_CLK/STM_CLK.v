@@ -1,5 +1,7 @@
+//module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50, clock_pll);
 module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50, clock_pll, reset, advance);
 
+	//input clock_in;
 	input clock_in, reset, advance;
 	output clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50, clock_pll;
 	
@@ -9,8 +11,14 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 	
 	// State machine
 	reg[1:0] state = 2'd0;
-	parameter init = 2'b00, all_on = a'b01, clk_2 = 2'b10, clk_3 = 2'b11;
+	parameter init = 2'b00;
+	parameter all_on = 2'b01;
+	parameter clk_2 = 2'b10;
+	parameter clk_3 = 2'b11;
 	reg[2:0] led = 3'd0;
+	//reg[2:0] ledLFSR = 3'd0;
+	reg ledLFSR;
+	reg clk;
 	
 	//clock division using the Altera PLL IP
 	IP_DIV PLL (
@@ -20,9 +28,19 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 		.locked   ()          // (terminated)
 	);
 	
-	//LFSR instantiation
+	// LFSR instantiation
 	LFSR lfsr_block(
-	//https://electronics.stackexchange.com/questions/64752/verilog-including-one-module-in-another-module
+		.clk    (clk),
+		.rst    (1'd0),
+		.prn    (ledLFSR)
+	);
+	
+	// Button debounce
+	wire clean_b;
+	clean_button cb (
+       .async_btn		(!button), // assuming active low button (the case for the DE0 boards)
+       .clean			(clean_b),
+       .clk				(clk)
 	);
 	
 	//clock_out is a copy of clock_in (to display as reference on the oscilloscope)
@@ -57,10 +75,6 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 		fedge_msb = count[1];
 	end
 	assign clock_out_div3_50 = fedge_msb | count[1];
-
-	//clock division using the Altera PLL IP
-	// TODO
-	// assign clock_pll = 0;
 	
 	// state output (actions)
 	always @ (state) begin
@@ -70,8 +84,15 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 		all_on:
 			led <= 3'd3;
 		clk_2:
+		begin
+			clk <= clock_out_div2;
+			led <= ledLFSR;
+		end
 		clk_3:
-		default:
+		begin
+			clk <= clock_out_div3_50;
+			led <= ledLFSR;
+		end
 		endcase
 	end
 	
