@@ -1,32 +1,25 @@
-//module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50, clock_pll);
-module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50, clock_pll, reset, advance);
+module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50, reset, advance, led);
 
 	//input clock_in;
 	input clock_in, reset, advance;
-	output clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50, clock_pll;
-	
+	output clock_out, clock_out_div2, clock_out_div3_33, clock_out_div3_50;
+	output [2:0]led;
+
 	// Clock
 	reg[1:0] count = 2'd0;
 	reg[0:0] fedge_msb = 1'd0;
 	
+	
 	// State machine
-	reg[1:0] state = 2'd0;
+	reg[2:0] ledreg;
+	assign led = ledreg;
 	parameter init = 2'b00;
 	parameter all_on = 2'b01;
 	parameter clk_2 = 2'b10;
 	parameter clk_3 = 2'b11;
-	reg[2:0] led = 3'd0;
-	//reg[2:0] ledLFSR = 3'd0;
-	reg ledLFSR;
+	reg[1:0] state = init;
+	wire[2:0] ledLFSR;
 	reg clk;
-	
-	//clock division using the Altera PLL IP
-	IP_DIV PLL (
-		.refclk   (clock_in),   //  refclk.clk
-		.rst      (1'b0),      //   reset.reset
-		.outclk_0 (clock_pll), // outclk0.clk
-		.locked   ()          // (terminated)
-	);
 	
 	// LFSR instantiation
 	LFSR lfsr_block(
@@ -38,9 +31,9 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 	// Button debounce
 	wire clean_b;
 	clean_button cb (
-       .async_btn		(!button), // assuming active low button (the case for the DE0 boards)
+       .async_btn		(!advance), // assuming active low button (the case for the DE0 boards)
        .clean			(clean_b),
-       .clk				(clk)
+       .clk				(clock_in)
 	);
 	
 	//clock_out is a copy of clock_in (to display as reference on the oscilloscope)
@@ -68,8 +61,6 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 			count <= 2'd0;
 		end
 	end
-	// assign clock_out_div3_33 = 0;
-
 	//clock division by 3 with 50% duty cycle
 	always @ (negedge clock_in) begin
 		fedge_msb = count[1];
@@ -80,27 +71,29 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 	always @ (state) begin
 		case(state)
 		init:
-			led <= 3'd0;
+			ledreg <= 3'b000;
 		all_on:
-			led <= 3'd3;
+			ledreg <= 3'b111;
 		clk_2:
 		begin
-			clk <= clock_out_div2;
-			led <= ledLFSR;
+			clk = clock_out_div2;
+			ledreg = ledLFSR;
 		end
 		clk_3:
 		begin
-			clk <= clock_out_div3_50;
-			led <= ledLFSR;
+			clk = clock_out_div3_50;
+			ledreg = ledLFSR;
 		end
+		default:
+			ledreg <= 3'b000;
 		endcase
 	end
 	
 	// state transition logic
-	always @ (posedge clk) begin
-		if (~reset) // active low, button pressed
+	always @ (posedge clock_in) begin
+		if (reset == 1'b0) // active low, button pressed
 			state <= init;
-		else if (~advance) // active low, button pressed
+		else if (clean_b == 1'b1)
 			case (state)
 			init:
 				state <= all_on;
@@ -110,6 +103,8 @@ module STM_CLK (clock_in, clock_out, clock_out_div2, clock_out_div3_33, clock_ou
 				state <= clk_3;
 			clk_3:
 				state <= clk_2;
+			default:
+				state <= init;
 		endcase
 	end
 

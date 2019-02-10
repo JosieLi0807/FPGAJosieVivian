@@ -1,5 +1,5 @@
 Analysis & Synthesis report for STM_CLK
-Sat Feb 09 17:48:20 2019
+Sun Feb 10 15:50:22 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |STM_CLK|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |STM_CLK
+ 15. Port Connectivity Checks: "LFSR:lfsr_block"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -33,22 +47,27 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sat Feb 09 17:48:20 2019           ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name               ; STM_CLK                                     ;
-; Top-level Entity Name       ; STM_CLK                                     ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Feb 10 15:50:22 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; STM_CLK                                     ;
+; Top-level Entity Name           ; STM_CLK                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 55                                          ;
+; Total pins                      ; 10                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -59,7 +78,6 @@ refer to the applicable agreement for further details.
 ; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
 ; Top-level entity name                                                           ; STM_CLK            ; STM_CLK            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                             ; 4                  ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -145,14 +163,202 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
+; STM_CLK.v                        ; yes             ; User Verilog HDL File  ; C:/FPGAJosieVivian/STM_CLK/STM_CLK.v      ;         ;
+; LFSR.v                           ; yes             ; User Verilog HDL File  ; C:/FPGAJosieVivian/STM_CLK/LFSR.v         ;         ;
+; clean_button.v                   ; yes             ; User Verilog HDL File  ; C:/FPGAJosieVivian/STM_CLK/clean_button.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 37             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 69             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 2              ;
+;     -- 5 input functions                    ; 2              ;
+;     -- 4 input functions                    ; 6              ;
+;     -- <=3 input functions                  ; 59             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 55             ;
+;                                             ;                ;
+; I/O pins                                    ; 10             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; clock_in~input ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 299            ;
+; Average fan-out                             ; 2.08           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+--------------+--------------+
+; |STM_CLK                   ; 69 (15)             ; 55 (9)                    ; 0                 ; 0          ; 10   ; 0            ; |STM_CLK                 ; STM_CLK      ; work         ;
+;    |LFSR:lfsr_block|       ; 25 (25)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |STM_CLK|LFSR:lfsr_block ; LFSR         ; work         ;
+;    |clean_button:cb|       ; 29 (29)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |STM_CLK|clean_button:cb ; clean_button ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |STM_CLK|state                                       ;
++--------------+-------------+-------------+--------------+------------+
+; Name         ; state.clk_3 ; state.clk_2 ; state.all_on ; state.init ;
++--------------+-------------+-------------+--------------+------------+
+; state.init   ; 0           ; 0           ; 0            ; 0          ;
+; state.all_on ; 0           ; 0           ; 1            ; 1          ;
+; state.clk_2  ; 0           ; 1           ; 0            ; 1          ;
+; state.clk_3  ; 1           ; 0           ; 0            ; 1          ;
++--------------+-------------+-------------+--------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; clk                                                ; clk                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; state~2                               ; Lost fanout        ;
+; state~3                               ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 55    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; clock_out_div2~reg0                     ; 3       ;
+; LFSR:lfsr_block|D123456[0]              ; 1       ;
+; clean_button:cb|press_reset[5]          ; 3       ;
+; clean_button:cb|press_reset[2]          ; 2       ;
+; clean_button:cb|press_reset[1]          ; 2       ;
+; clean_button:cb|press_reset[0]          ; 2       ;
+; clean_button:cb|press_reset[3]          ; 2       ;
+; clean_button:cb|press_reset[4]          ; 2       ;
+; clean_button:cb|press_reset[6]          ; 2       ;
+; clean_button:cb|press_reset[7]          ; 2       ;
+; Total number of inverted registers = 10 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |STM_CLK|clean_button:cb|press_reset[8] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |STM_CLK|clean_button:cb|press_reset[2] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |STM_CLK|state                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |STM_CLK ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; init           ; 00    ; Unsigned Binary                                ;
+; all_on         ; 01    ; Unsigned Binary                                ;
+; clk_2          ; 10    ; Unsigned Binary                                ;
+; clk_3          ; 11    ; Unsigned Binary                                ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "LFSR:lfsr_block" ;
++------+-------+----------+-------------------+
+; Port ; Type  ; Severity ; Details           ;
++------+-------+----------+-------------------+
+; rst  ; Input ; Info     ; Stuck at GND      ;
++------+-------+----------+-------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 55                          ;
+;     ENA               ; 19                          ;
+;     plain             ; 36                          ;
+; arriav_lcell_comb     ; 70                          ;
+;     arith             ; 38                          ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 32                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 2                           ;
+; boundary_port         ; 10                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.10                        ;
+; Average LUT depth     ; 2.07                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,35 +367,46 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Feb 09 17:48:09 2019
+    Info: Processing started: Sun Feb 10 15:50:11 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off STM_CLK -c STM_CLK
-Warning (125092): Tcl Script File sys_pll.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE sys_pll.qip
-Warning (125092): Tcl Script File sys_pll.sip not found
-    Info (125063): set_global_assignment -name SIP_FILE sys_pll.sip
-Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
-Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file stm_clk.v
     Info (12023): Found entity 1: STM_CLK File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file ip_div.v
-    Info (12023): Found entity 1: IP_DIV File: C:/FPGAJosieVivian/STM_CLK/IP_DIV.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file ip_div/ip_div_0002.v
-    Info (12023): Found entity 1: IP_DIV_0002 File: C:/FPGAJosieVivian/STM_CLK/IP_DIV/IP_DIV_0002.v Line: 2
-Warning (12019): Can't analyze file -- file finite_state_machine.v is missing
-Warning (12019): Can't analyze file -- file LFSR.v is missing
-Info (12021): Found 1 design units, including 1 entities, in source file lfsr_stm.v
-    Info (12023): Found entity 1: LFSR File: C:/FPGAJosieVivian/STM_CLK/LFSR_stm.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file lfsr.v
+    Info (12023): Found entity 1: LFSR File: C:/FPGAJosieVivian/STM_CLK/LFSR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clean_button.v
     Info (12023): Found entity 1: clean_button File: C:/FPGAJosieVivian/STM_CLK/clean_button.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at STM_CLK.v(41): created implicit net for "button" File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 41
 Info (12127): Elaborating entity "STM_CLK" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at STM_CLK.v(18): object "led" assigned a value but never read File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 18
-Error (10663): Verilog HDL Port Connection error at STM_CLK.v(35): output or inout port "prn" must be connected to a structural net expression File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 35
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 7 warnings
-    Error: Peak virtual memory: 4789 megabytes
-    Error: Processing ended: Sat Feb 09 17:48:20 2019
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:26
+Warning (10230): Verilog HDL assignment warning at STM_CLK.v(70): truncated value with size 32 to match size of target (2) File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 70
+Warning (10235): Verilog HDL Always Construct warning at STM_CLK.v(91): variable "clock_out_div2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 91
+Warning (10235): Verilog HDL Always Construct warning at STM_CLK.v(92): variable "ledLFSR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 92
+Warning (10235): Verilog HDL Always Construct warning at STM_CLK.v(96): variable "clock_out_div3_50" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 96
+Warning (10235): Verilog HDL Always Construct warning at STM_CLK.v(97): variable "ledLFSR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at STM_CLK.v(83): inferring latch(es) for variable "clk", which holds its previous value in one or more paths through the always construct File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 83
+Info (10041): Inferred latch for "clk" at STM_CLK.v(83) File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 83
+Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:lfsr_block" File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 41
+Warning (10230): Verilog HDL assignment warning at LFSR.v(26): truncated value with size 32 to match size of target (23) File: C:/FPGAJosieVivian/STM_CLK/LFSR.v Line: 26
+Info (12128): Elaborating entity "clean_button" for hierarchy "clean_button:cb" File: C:/FPGAJosieVivian/STM_CLK/STM_CLK.v Line: 49
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/FPGAJosieVivian/STM_CLK/output_files/STM_CLK.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 85 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 75 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Sun Feb 10 15:50:22 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:26
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/FPGAJosieVivian/STM_CLK/output_files/STM_CLK.map.smsg.
 
 

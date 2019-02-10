@@ -1,0 +1,7 @@
+
+State Machine - |STM_CLK|state
+Name state.clk_3 state.clk_2 state.all_on state.init 
+state.init 0 0 0 0 
+state.all_on 0 0 1 1 
+state.clk_2 0 1 0 1 
+state.clk_3 1 0 0 1 

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Ign)
-		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
+		Device PartName(5CSEMA4) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
 		Device PartName(5CSEMA4U23) Path("C:/FPGAJosieVivian/STM_CLK/output_files/") File("STM_CLK.sof") MfrSpec(OpMask(1));
 

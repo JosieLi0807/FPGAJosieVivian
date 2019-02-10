@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "clock_out_div2",
+					"strict" : false
+				},
+				{
+					"name" : "clock_out_div3_33",
+					"strict" : false
+				},
+				{
+					"name" : "clock_out_div3_50",
+					"strict" : false
+				},
+				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_in",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "advance",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
