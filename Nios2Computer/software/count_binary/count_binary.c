@@ -335,6 +335,9 @@ static void handle_button_press(alt_u8 type, FILE *lcd)
 
 int main(void)
 { 
+/*  Output on Console   */
+	printf("Hello from Nios II!\n Team Member: Vivian Lin, Josie Li");
+
     int i;
     int  __attribute__ ((unused))  wait_time;  /* Attribute suppresses "var set but not used" warning. */
     FILE * lcd;
@@ -356,57 +359,109 @@ int main(void)
 
     initial_message();
 
-/* Continue 0-ff counting loop. */
+///* Continue 0-ff counting loop. */
+//
+//    while( 1 )
+//    {
+//        usleep(100000);
+//        if (edge_capture != 0)
+//        {
+//            /* Handle button presses while counting... */
+//            handle_button_press('c', lcd);
+//        }
+//        /* If no button presses, try to output counting to all. */
+//        else
+//        {
+//            count_all( lcd );
+//        }
+//        /*
+//         * If done counting, wait about 7 seconds...
+//         * detect button presses while waiting.
+//         */
+//        if( count == 0xff )
+//        {
+//            LCD_PRINTF(lcd, "%c%s %c%s %c%s Waiting...\n", ESC, ESC_TOP_LEFT,
+//                       ESC, ESC_CLEAR, ESC, ESC_COL1_INDENT5);
+//            printf("\nWaiting...");
+//            edge_capture = 0; /* Reset to 0 during wait/pause period. */
+//
+//            /* Clear the 2nd. line of the LCD screen. */
+//            LCD_PRINTF(lcd, "%c%s, %c%s", ESC, ESC_COL2_INDENT5, ESC,
+//                       ESC_CLEAR);
+//            wait_time = 0;
+//            for (i = 0; i<70; ++i)
+//            {
+//                printf(".");
+//                wait_time = i/10;
+//                LCD_PRINTF(lcd, "%c%s %ds\n", ESC, ESC_COL2_INDENT5,
+//                    wait_time+1);
+//
+//                if (edge_capture != 0)
+//                {
+//                    printf( "\nYou pushed:  " );
+//                    handle_button_press('w', lcd);
+//                }
+//                usleep(100000); /* Sleep for 0.1s. */
+//            }
+//            /*  Output the "loop start" messages before looping, again.
+//             */
+//            initial_message();
+//            lcd_init( lcd );
+//        }
+//        count++;
+//    }
 
-    while( 1 ) 
-    {
-        usleep(100000);
-        if (edge_capture != 0)
-        {
-            /* Handle button presses while counting... */
-            handle_button_press('c', lcd);
-        }
-        /* If no button presses, try to output counting to all. */
-        else
-        {
-            count_all( lcd );
-        }
-        /*
-         * If done counting, wait about 7 seconds...
-         * detect button presses while waiting.
-         */
-        if( count == 0xff )
-        {
-            LCD_PRINTF(lcd, "%c%s %c%s %c%s Waiting...\n", ESC, ESC_TOP_LEFT,
-                       ESC, ESC_CLEAR, ESC, ESC_COL1_INDENT5);
-            printf("\nWaiting...");
-            edge_capture = 0; /* Reset to 0 during wait/pause period. */
+    /* Continue ff-0 counting loop. */
 
-            /* Clear the 2nd. line of the LCD screen. */
-            LCD_PRINTF(lcd, "%c%s, %c%s", ESC, ESC_COL2_INDENT5, ESC,
-                       ESC_CLEAR);
-            wait_time = 0;
-            for (i = 0; i<70; ++i)
+        while( 1 )
+        {
+            usleep(100000);
+            if (edge_capture != 0)
             {
-                printf(".");
-                wait_time = i/10;
-                LCD_PRINTF(lcd, "%c%s %ds\n", ESC, ESC_COL2_INDENT5,
-                    wait_time+1);
-
-                if (edge_capture != 0) 
-                {
-                    printf( "\nYou pushed:  " );
-                    handle_button_press('w', lcd);
-                }
-                usleep(100000); /* Sleep for 0.1s. */
+                /* Handle button presses while counting... */
+                handle_button_press('c', lcd);
             }
-            /*  Output the "loop start" messages before looping, again.
+            /* If no button presses, try to output counting to all. */
+            else
+            {
+                count_all( lcd );
+            }
+            /*
+             * If done counting, wait about 7 seconds...
+             * detect button presses while waiting.
              */
-            initial_message();
-            lcd_init( lcd );
+            if( count == 0x00 )
+            {
+                LCD_PRINTF(lcd, "%c%s %c%s %c%s Waiting...\n", ESC, ESC_TOP_LEFT,
+                           ESC, ESC_CLEAR, ESC, ESC_COL1_INDENT5);
+                printf("\nWaiting...");
+                edge_capture = 0; /* Reset to 0 during wait/pause period. */
+
+                /* Clear the 2nd. line of the LCD screen. */
+                LCD_PRINTF(lcd, "%c%s, %c%s", ESC, ESC_COL2_INDENT5, ESC,
+                           ESC_CLEAR);
+                wait_time = 0;
+                for (i = 0; i<70; ++i)
+                {
+                    printf(".");
+                    wait_time = i/10;
+                    LCD_PRINTF(lcd, "%c%s %ds\n", ESC, ESC_COL2_INDENT5,
+                        wait_time+1);
+
+                    if (edge_capture != 0)
+                    {
+                        printf( "\nYou pushed:  " );
+                        handle_button_press('w', lcd);
+                    }
+                    usleep(100000); /* Sleep for 0.1s. */
+                }
+                /*  Output the "loop start" messages before looping, again.
+                 */
+                initial_message();
+                lcd_init( lcd );
+            }
+            count--;
         }
-        count++;
-    }
     LCD_CLOSE(lcd);
     return 0;
 }
