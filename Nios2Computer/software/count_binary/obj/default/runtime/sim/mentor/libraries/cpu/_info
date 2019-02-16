@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/OneDrive/UVA/TeachingInternship/Nios2Computer/software/count_binary/obj/default/runtime/sim/mentor
+vNios2Computer_nios2_cpu_cpu
+Z1 !s110 1518979543
+!i10b 1
+!s100 3jTT^`[UOz5XEg9I0PF6]1
+IKmBH9[c>mh5>Vmd`a70Z^1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1518905355
+8D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu.vo
+FD:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu.vo
+L0 31
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1518979543.000000
+!s107 D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu.vo|
+!s90 -reportprogress|300|D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu.vo|-work|cpu|
+!i113 1
+Z6 o-work cpu
+Z7 tCvgOpt 0
+n@nios2@computer_nios2_cpu_cpu
+vNios2Computer_nios2_cpu_cpu_debug_slave_sysclk
+R1
+!i10b 1
+!s100 5ETdUL9DUH:oG?goWi@RX2
+IRga1GWN>DD5F:bYQg^hL]2
+R2
+R0
+R3
+8D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_sysclk.v
+FD:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_sysclk.v
+Z8 L0 21
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_sysclk.v|
+!s90 -reportprogress|300|D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_sysclk.v|-work|cpu|
+!i113 1
+R6
+R7
+n@nios2@computer_nios2_cpu_cpu_debug_slave_sysclk
+vNios2Computer_nios2_cpu_cpu_debug_slave_tck
+R1
+!i10b 1
+!s100 ;S?fjQQT4:f=ViBdKV=0j2
+I`;B9MTi=^onaZWY2:V]6Z2
+R2
+R0
+R3
+8D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_tck.v
+FD:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_tck.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_tck.v|
+!s90 -reportprogress|300|D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_tck.v|-work|cpu|
+!i113 1
+R6
+R7
+n@nios2@computer_nios2_cpu_cpu_debug_slave_tck
+vNios2Computer_nios2_cpu_cpu_debug_slave_wrapper
+R1
+!i10b 1
+!s100 WF[HEm6[JV^8[2g22[k220
+IzFn:KO<2`nPc_5Oe9@=B<2
+R2
+R0
+R3
+8D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_wrapper.v
+FD:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_wrapper.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_wrapper.v|
+!s90 -reportprogress|300|D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_debug_slave_wrapper.v|-work|cpu|
+!i113 1
+R6
+R7
+n@nios2@computer_nios2_cpu_cpu_debug_slave_wrapper
+vNios2Computer_nios2_cpu_cpu_mult_cell
+R1
+!i10b 1
+!s100 QS[M40?9@A8iXZ11e6W:K0
+IDA5P7<0^f8]=NhP2mFA`m2
+R2
+R0
+R3
+8D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_mult_cell.v
+FD:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_mult_cell.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_mult_cell.v|
+!s90 -reportprogress|300|D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_mult_cell.v|-work|cpu|
+!i113 1
+R6
+R7
+n@nios2@computer_nios2_cpu_cpu_mult_cell
+vNios2Computer_nios2_cpu_cpu_test_bench
+!s110 1518979544
+!i10b 1
+!s100 m?7ad?n:h2M4^FhI2mX>02
+IcA:zdPHOcL1;LjbN@_c6F1
+R2
+R0
+R3
+8D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_test_bench.v
+FD:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_test_bench.v
+R8
+R4
+r1
+!s85 0
+31
+!s108 1518979544.000000
+!s107 D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_test_bench.v|
+!s90 -reportprogress|300|D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer_nios2_cpu_cpu_test_bench.v|-work|cpu|
+!i113 1
+R6
+R7
+n@nios2@computer_nios2_cpu_cpu_test_bench

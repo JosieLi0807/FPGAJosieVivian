@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Nios2Computer.nios2_cpu.clock_bridge -pg 1
+preplace inst Nios2Computer.clk_0 -pg 1 -lvl 1 -y 430
+preplace inst Nios2Computer.nios2_cpu.cpu -pg 1
+preplace inst Nios2Computer.jtag_uart -pg 1 -lvl 3 -y 190
+preplace inst Nios2Computer.onchip_mem -pg 1 -lvl 3 -y 30
+preplace inst Nios2Computer.nios2_cpu.reset_bridge -pg 1
+preplace inst Nios2Computer.sys_clk_timer -pg 1 -lvl 3 -y 290
+preplace inst Nios2Computer -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Nios2Computer.sysid -pg 1 -lvl 3 -y 110
+preplace inst Nios2Computer.nios2_cpu -pg 1 -lvl 2 -y 260
+preplace inst Nios2Computer.led_pio -pg 1 -lvl 3 -y 390
+preplace netloc FAN_OUT<net_container>Nios2Computer</net_container>(MASTER)clk_0.clk_reset,(SLAVE)nios2_cpu.reset,(SLAVE)sys_clk_timer.reset,(SLAVE)sysid.reset,(SLAVE)led_pio.reset,(SLAVE)jtag_uart.reset,(SLAVE)onchip_mem.reset1) 1 1 2 380 400 780
+preplace netloc FAN_OUT<net_container>Nios2Computer</net_container>(SLAVE)sysid.clk,(SLAVE)jtag_uart.clk,(SLAVE)onchip_mem.clk1,(MASTER)clk_0.clk,(SLAVE)led_pio.clk,(SLAVE)nios2_cpu.clk,(SLAVE)sys_clk_timer.clk) 1 1 2 360 220 800
+preplace netloc EXPORT<net_container>Nios2Computer</net_container>(SLAVE)Nios2Computer.led_pio_ext_connection,(SLAVE)led_pio.external_connection) 1 0 3 NJ 420 NJ 420 NJ
+preplace netloc EXPORT<net_container>Nios2Computer</net_container>(SLAVE)Nios2Computer.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Nios2Computer</net_container>(SLAVE)sys_clk_timer.irq,(MASTER)nios2_cpu.irq,(SLAVE)jtag_uart.irq) 1 2 1 760
+preplace netloc EXPORT<net_container>Nios2Computer</net_container>(SLAVE)Nios2Computer.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>Nios2Computer</net_container>(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)nios2_cpu.data_master,(MASTER)nios2_cpu.instruction_master,(SLAVE)led_pio.s1,(SLAVE)sys_clk_timer.s1,(SLAVE)sysid.control_slave,(SLAVE)onchip_mem.s1,(SLAVE)nios2_cpu.debug_mem_slave) 1 1 2 380 200 740
+levelinfo -pg 1 0 150 1000
+levelinfo -hier Nios2Computer 160 190 500 840 990

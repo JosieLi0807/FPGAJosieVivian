@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/OneDrive/UVA/TeachingInternship/Nios2Computer/software/count_binary/obj/default/runtime/sim/mentor
+vNios2Computer
+!s110 1518979545
+!i10b 1
+!s100 UfcMg0U>ccNA]>0acmEdc2
+I=40M<`Ff5cWlAdY;jS6K50
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1518905328
+8D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer.v
+FD:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1518979545.000000
+!s107 D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer.v|
+!s90 -reportprogress|300|D:/OneDrive/UVA/TeachingInternship/Nios2Computer/Nios2Computer/testbench/Nios2Computer_tb/simulation/submodules/Nios2Computer.v|-work|Nios2Computer_inst|
+!i113 1
+o-work Nios2Computer_inst
+tCvgOpt 0
+n@nios2@computer

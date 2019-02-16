@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Feb 17 18:11:39 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Nios2Computer
+Top-level Entity Name : Nios2Computer
+Family : Cyclone V
+Device : 5CSEMA4U23C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,321 / 15,880 ( 8 % )
+Total registers : 2069
+Total pins : 10 / 314 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 210,048 / 2,764,800 ( 8 % )
+Total RAM Blocks : 45 / 270 ( 17 % )
+Total DSP Blocks : 3 / 84 ( 4 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 5 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )
