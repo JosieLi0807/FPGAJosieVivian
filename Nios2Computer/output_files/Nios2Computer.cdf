@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4U23) Path("C:/FPGAJosieVivian/Nios2Computer/output_files/") File("Nios2Computer.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA4U23) Path("C:/FPGAJosieVivian/FPGAJosieVivian/Nios2Computer/output_files/") File("Nios2Computer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
