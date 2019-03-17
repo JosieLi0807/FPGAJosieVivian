@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 17 13:49:43 2019
+# Process ID: 11196
+# Current directory: C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_rtl_multiplier_0_0_synth_1
+# Command line: vivado.exe -log Zynq_CPU_rtl_multiplier_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zynq_CPU_rtl_multiplier_0_0.tcl
+# Log file: C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_rtl_multiplier_0_0_synth_1/Zynq_CPU_rtl_multiplier_0_0.vds
+# Journal file: C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_rtl_multiplier_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Zynq_CPU_rtl_multiplier_0_0.tcl -notrace

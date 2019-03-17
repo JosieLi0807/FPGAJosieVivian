@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hls_multiplier.cpp" path="C:\FPGAJosieVivian\HLS_Multiplier\hls_multiplier\hls_multiplier.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_hls_multiplier.cpp" path="C:\FPGAJosieVivian\HLS_Multiplier\hls_multiplier\test_hls_multiplier.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

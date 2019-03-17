@@ -1,0 +1,86 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado/2018.3/msys64/mingw64/bin/g++"
+   Compiling hls_multiplier.cpp_pre.cpp.tb.cpp
+   Compiling apatb_hls_multiplier.cpp
+   Compiling test_hls_multiplier.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+initialized variables: a=2, b=3, p=0 
+testing hls_multiplier: 2 * 3 = 6 
+
+C:\FPGAJosieVivian\HLS_Multiplier\hls_multiplier\solution1\sim\verilog>set PATH= 
+
+C:\FPGAJosieVivian\HLS_Multiplier\hls_multiplier\solution1\sim\verilog>call C:/Xilinx/Vivado/2018.3/bin/xelab xil_defaultlib.apatb_hls_multiplier_top glbl -prj hls_multiplier.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "C:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s hls_multiplier  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_hls_multiplier_top glbl -prj hls_multiplier.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s hls_multiplier 
+Multi-threading is on. Using 30 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/AESL_axi_slave_CRTLS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CRTLS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/hls_multiplier.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_hls_multiplier_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/hls_multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hls_multiplier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/hls_multiplier_CRTLS_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hls_multiplier_CRTLS_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/hls_multiplier_mubkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hls_multiplier_mubkb_DSP48_0
+INFO: [VRFC 10-311] analyzing module hls_multiplier_mubkb
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.hls_multiplier_CRTLS_s_axi
+Compiling module xil_defaultlib.hls_multiplier_mubkb_DSP48_0
+Compiling module xil_defaultlib.hls_multiplier_mubkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.hls_multiplier
+Compiling module xil_defaultlib.AESL_axi_slave_CRTLS
+Compiling module xil_defaultlib.apatb_hls_multiplier_top
+Compiling module work.glbl
+Built simulation snapshot hls_multiplier
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/xsim.dir/hls_multiplier/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Mar 17 14:36:55 2019...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/hls_multiplier/xsim_script.tcl
+# xsim {hls_multiplier} -autoloadwcfg -tclbatch {hls_multiplier.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source hls_multiplier.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "605000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 645 ns : File "C:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/sim/verilog/hls_multiplier.autotb.v" Line 313
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Mar 17 14:37:00 2019...
+initialized variables: a=2, b=3, p=0 
+testing hls_multiplier: 2 * 3 = 6 
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-210] Design is translated to an combinational logic. II and Latency will be marked as all 0.

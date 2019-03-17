@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName hls_multiplier.cpp_pre.cpp.tb.cpp

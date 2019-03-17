@@ -1,0 +1,7 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="10" filename="hls_multiplier/hls_multiplier.cpp" linenumber="3" name="tmp" contextFuncName="hls_multiplier" moduleName="hls_multiplier" rtlName="p_fu_42_p10" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\FPGAJosieVivian\HLS_Multiplier"><\/item>
+<item  id="12" filename="hls_multiplier/hls_multiplier.cpp" linenumber="4" name="tmp_1" contextFuncName="hls_multiplier" moduleName="hls_multiplier" rtlName="p_fu_42_p00" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\FPGAJosieVivian\HLS_Multiplier"><\/item>
+<item  id="14" filename="hls_multiplier/hls_multiplier.cpp" linenumber="6" name="p" contextFuncName="hls_multiplier" moduleName="hls_multiplier" rtlName="hls_multiplier_mubkb_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\FPGAJosieVivian\HLS_Multiplier"><\/item>
+<\/annotationInfo>
+</annotationInfo>

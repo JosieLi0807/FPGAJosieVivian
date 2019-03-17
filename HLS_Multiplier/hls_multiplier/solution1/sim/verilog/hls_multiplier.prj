@@ -1,0 +1,7 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_axi_slave_CRTLS.v"
+sv xil_defaultlib "hls_multiplier.autotb.v"
+sv xil_defaultlib "hls_multiplier.v"
+sv xil_defaultlib "hls_multiplier_CRTLS_s_axi.v"
+sv xil_defaultlib "hls_multiplier_mubkb.v"
+

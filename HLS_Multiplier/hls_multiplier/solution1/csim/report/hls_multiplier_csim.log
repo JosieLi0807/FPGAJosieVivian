@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../test_hls_multiplier.cpp in debug mode
+   Compiling ../../../hls_multiplier.cpp in debug mode
+   Generating csim.exe
+initialized variables: a=2, b=3, p=0 
+testing hls_multiplier: 2 * 3 = 6 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
