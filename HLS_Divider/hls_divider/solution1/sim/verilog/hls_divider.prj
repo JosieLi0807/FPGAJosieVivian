@@ -1,0 +1,8 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_axi_slave_CRTLS.v"
+sv xil_defaultlib "hls_divider.autotb.v"
+sv xil_defaultlib "hls_divider.v"
+sv xil_defaultlib "hls_divider_CRTLS_s_axi.v"
+sv xil_defaultlib "hls_divider_udiv_bkb.v"
+sv xil_defaultlib "hls_divider_urem_cud.v"
+

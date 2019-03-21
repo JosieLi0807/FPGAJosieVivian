@@ -33,12 +33,13 @@ set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
 set_property ip_repo_paths {
   c:/FPGAJosieVivian/ip_repo/rtl_multiplier_1.0
-  c:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/impl/ip
+  c:/FPGAJosieVivian/HLS_Divider/hls_divider/solution1/impl/ip
+  c:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0.xci
+read_ip -quiet C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0.xci
 set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -94,32 +95,32 @@ write_checkpoint -force -noxdef Zynq_CPU_xbar_0.dcp
 create_report "Zynq_CPU_xbar_0_synth_1_synth_report_utilization_0" "report_utilization -file Zynq_CPU_xbar_0_utilization_synth.rpt -pb Zynq_CPU_xbar_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0.dcp c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0.dcp
+  file copy -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0.dcp C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.v
+  write_verilog -force -mode synth_stub C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.v
+  write_verilog -force -mode funcsim C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -129,32 +130,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0.dcp c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0.dcp
+  file copy -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0.dcp C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_stub.v c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.v
+  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_stub.v C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_stub.vhdl c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.vhdl
+  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_stub.vhdl C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_sim_netlist.v c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.v
+  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_sim_netlist.v C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_sim_netlist.vhdl c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.vhdl
+  file rename -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.runs/Zynq_CPU_xbar_0_synth_1/Zynq_CPU_xbar_0_sim_netlist.vhdl C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -163,13 +164,13 @@ if { [catch {
 
 if {[file isdir C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.ip_user_files/ip/Zynq_CPU_xbar_0]} {
   catch { 
-    file copy -force c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.v C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.ip_user_files/ip/Zynq_CPU_xbar_0
+    file copy -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.v C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.ip_user_files/ip/Zynq_CPU_xbar_0
   }
 }
 
 if {[file isdir C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.ip_user_files/ip/Zynq_CPU_xbar_0]} {
   catch { 
-    file copy -force c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.vhdl C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.ip_user_files/ip/Zynq_CPU_xbar_0
+    file copy -force C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_stub.vhdl C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.ip_user_files/ip/Zynq_CPU_xbar_0
   }
 }
 file delete __synthesis_is_running__

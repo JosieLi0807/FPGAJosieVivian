@@ -22,6 +22,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Zynq_CPU_xbar_0
 # IP: bd/Zynq_CPU/ip/Zynq_CPU_hls_multiplier_0_0/Zynq_CPU_hls_multiplier_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Zynq_CPU_hls_multiplier_0_0 || ORIG_REF_NAME==Zynq_CPU_hls_multiplier_0_0} -quiet] -quiet
 
+# IP: bd/Zynq_CPU/ip/Zynq_CPU_hls_divider_0_0/Zynq_CPU_hls_divider_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Zynq_CPU_hls_divider_0_0 || ORIG_REF_NAME==Zynq_CPU_hls_divider_0_0} -quiet] -quiet
+
 # IP: bd/Zynq_CPU/ip/Zynq_CPU_auto_pc_0/Zynq_CPU_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Zynq_CPU_auto_pc_0 || ORIG_REF_NAME==Zynq_CPU_auto_pc_0} -quiet] -quiet
 

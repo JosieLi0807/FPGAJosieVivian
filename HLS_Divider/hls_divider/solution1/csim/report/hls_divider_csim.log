@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../test_hls_divider.cpp in debug mode
+   Compiling ../../../hls_divider.cpp in debug mode
+   Generating csim.exe
+initialized variables: a=7, b=3, r=0 
+testing hls_divider: 7 / 3 = 2 mod 1 (r is 131073)
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

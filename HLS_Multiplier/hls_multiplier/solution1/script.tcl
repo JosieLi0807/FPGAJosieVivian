@@ -6,10 +6,11 @@
 open_project hls_multiplier
 set_top hls_multiplier
 add_files hls_multiplier/hls_multiplier.cpp
-add_files -tb hls_multiplier/test_hls_multiplier.cpp
+add_files -tb hls_multiplier/test_hls_multiplier.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020clg400-1} -tool vivado
 create_clock -period 10 -name default
+config_export -format ip_catalog -rtl verilog
 #source "./hls_multiplier/solution1/directives.tcl"
 csim_design -clean
 csynth_design

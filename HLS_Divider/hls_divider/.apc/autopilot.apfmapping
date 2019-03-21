@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hls_divider.cpp" path="C:\FPGAJosieVivian\HLS_Divider\hls_divider\hls_divider.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_hls_divider.cpp" path="C:\FPGAJosieVivian\HLS_Divider\hls_divider\test_hls_divider.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
