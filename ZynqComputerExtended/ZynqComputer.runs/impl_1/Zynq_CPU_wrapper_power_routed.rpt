@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun Mar 17 13:52:44 2019
+| Date             : Thu Mar 21 12:54:22 2019
 | Host             : EmbSys18 running 64-bit major release  (build 9200)
 | Command          : report_power -file Zynq_CPU_wrapper_power_routed.rpt -pb Zynq_CPU_wrapper_power_summary_routed.pb -rpx Zynq_CPU_wrapper_power_routed.rpx
 | Design           : Zynq_CPU_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.395        |
+| Total On-Chip Power (W)  | 1.396        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.261        |
+| Dynamic (W)              | 1.262        |
 | Device Static (W)        | 0.134        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.9         |
@@ -52,18 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1270 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      347 |     53200 |            0.65 |
-|   Register              |    <0.001 |      571 |    106400 |            0.54 |
-|   CARRY4                |    <0.001 |        6 |     13300 |            0.05 |
-|   LUT as Shift Register |    <0.001 |       60 |     17400 |            0.34 |
-|   Others                |     0.000 |      188 |       --- |             --- |
-| Signals                 |     0.001 |      925 |       --- |             --- |
-| DSPs                    |    <0.001 |        1 |       220 |            0.45 |
+| Clocks                  |     0.004 |        3 |       --- |             --- |
+| Slice Logic             |     0.001 |     1886 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      588 |     53200 |            1.11 |
+|   Register              |    <0.001 |      871 |    106400 |            0.82 |
+|   CARRY4                |    <0.001 |       12 |     13300 |            0.09 |
+|   F7/F8 Muxes           |    <0.001 |        5 |     53200 |           <0.01 |
+|   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
+|   Others                |     0.000 |      203 |       --- |             --- |
+| Signals                 |     0.002 |     1464 |       --- |             --- |
+| DSPs                    |    <0.001 |        2 |       220 |            0.91 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.134 |          |           |                 |
-| Total                   |     1.395 |          |           |                 |
+| Total                   |     1.396 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.018 |       0.005 |      0.013 |
+| Vccint    |       1.000 |     0.019 |       0.006 |      0.013 |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -149,11 +150,11 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| Zynq_CPU_wrapper         |     1.261 |
-|   Zynq_CPU_i             |     1.261 |
+| Zynq_CPU_wrapper         |     1.262 |
+|   Zynq_CPU_i             |     1.262 |
 |     processing_system7_0 |     1.256 |
 |       inst               |     1.256 |
-|     ps7_0_axi_periph     |     0.004 |
+|     ps7_0_axi_periph     |     0.005 |
 |       s00_couplers       |     0.004 |
 +--------------------------+-----------+
 

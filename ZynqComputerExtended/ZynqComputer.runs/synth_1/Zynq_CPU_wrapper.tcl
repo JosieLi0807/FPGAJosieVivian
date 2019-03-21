@@ -29,7 +29,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
-set_property ip_repo_paths c:/FPGAJosieVivian/ip_repo/rtl_multiplier_1.0 [current_project]
+set_property ip_repo_paths {
+  c:/FPGAJosieVivian/ip_repo/rtl_multiplier_1.0
+  c:/FPGAJosieVivian/HLS_Multiplier/hls_multiplier/solution1/impl/ip
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -39,6 +42,8 @@ set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/Zyn
 set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_rst_ps7_0_100M_0/Zynq_CPU_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_rst_ps7_0_100M_0/Zynq_CPU_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_rst_ps7_0_100M_0/Zynq_CPU_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_xbar_0/Zynq_CPU_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_hls_multiplier_0_0/constraints/hls_multiplier_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_auto_pc_0/Zynq_CPU_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/Zynq_CPU_ooc.xdc]
 

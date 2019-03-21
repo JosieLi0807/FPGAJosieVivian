@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 17 13:50:53 2019
+-- Date        : Sun Mar 17 13:50:52 2019
 -- Host        : EmbSys18 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/FPGAJosieVivian/ZynqComputerExtended/ZynqComputer.srcs/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_auto_pc_0/Zynq_CPU_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Zynq_CPU_auto_pc_0 -prefix
+--               Zynq_CPU_auto_pc_0_ Zynq_CPU_auto_pc_0_stub.vhdl
 -- Design      : Zynq_CPU_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
